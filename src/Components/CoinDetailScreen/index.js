@@ -1,7 +1,14 @@
 import React, {useEffect, useState} from 'react';
-import {FlatList, Image, SectionList, Text, View} from 'react-native';
+import {
+  FlatList,
+  Image,
+  Pressable,
+  SectionList,
+  Text,
+  View,
+} from 'react-native';
 import styles from './CoinDetail.style';
-import {Http} from '../../libs';
+import {Http, Storage} from '../../libs';
 import CoinMarketItem from './CoinMarketItem';
 
 const CoinDetailScreen = ({
@@ -20,6 +27,7 @@ const CoinDetailScreen = ({
     },
   },
 }) => {
+  const [isFavorite, setIsFavorite] = useState(false);
   const [market, setMarket] = useState([]);
 
   const getImgCoin = (nameid) =>
@@ -54,8 +62,20 @@ const CoinDetailScreen = ({
   return (
     <View style={styles.container}>
       <View style={styles.subHeader}>
-        <Image style={styles.iconImage} source={{uri: getImgCoin(nameid)}} />
-        <Text style={styles.titleText}>{name}</Text>
+        <View style={styles.row}>
+          <Image style={styles.iconImage} source={{uri: getImgCoin(nameid)}} />
+          <Text style={styles.titleText}>{name}</Text>
+        </View>
+
+        <Pressable
+          style={[
+            styles.btnFavorite,
+            isFavorite ? styles.btnFavoriteRemove : styles.btnFavoriteAdd,
+          ]}>
+          <Text style={styles.btnFavoriteText}>
+            {isFavorite ? 'Remove favorite' : 'Add favorite'}
+          </Text>
+        </Pressable>
       </View>
 
       <SectionList

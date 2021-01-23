@@ -2,6 +2,19 @@ import {StyleSheet} from 'react-native';
 import Colors from '../../utils/colors';
 
 export default StyleSheet.create({
+  btnFavorite: {
+    borderRadius: 8,
+    padding: 8,
+  },
+  btnFavoriteText: {
+    color: 'white',
+  },
+  btnFavoriteAdd: {
+    backgroundColor: Colors.picton,
+  },
+  btnFavoriteRemove: {
+    backgroundColor: Colors.carmine,
+  },
   container: {
     backgroundColor: Colors.charade,
     flex: 1,
@@ -54,6 +67,7 @@ export default StyleSheet.create({
     alignItems: 'center',
     backgroundColor: 'rgba(0,0,0, 0.1)',
     flexDirection: 'row',
+    justifyContent: 'space-between',
     padding: 16,
   },
 });

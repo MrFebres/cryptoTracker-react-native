@@ -6,8 +6,8 @@ import CoinsItem from '../CoinItem';
 import CoinSearch from '../CoinSearch';
 
 const CoinsScreen = ({navigation}) => {
-  const [coins, setCoins] = useState([]);
   const [allCoins, setAllCoins] = useState([]);
+  const [coins, setCoins] = useState([]);
   const [loading, setLoading] = useState(false);
 
   const handleSearch = (query) => {
