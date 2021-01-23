@@ -7,7 +7,6 @@ const CoinSearch = ({onChange}) => {
 
   const handleText = (value) => {
     setQuery(value);
-
     if (onChange) onChange(query);
   };
 
