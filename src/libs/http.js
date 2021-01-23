@@ -8,7 +8,7 @@ export class Http {
 
       return json;
     } catch (err) {
-      console.info('[FETCH-ERR] ', err);
+      console.info('[GET-ERR] ', err);
       throw new Error();
     }
   };
@@ -23,7 +23,7 @@ export class Http {
 
       return json;
     } catch (err) {
-      console.info('[FETCH-ERR] ', err);
+      console.info('[POST-ERR] ', err);
       throw new Error();
     }
   };
@@ -38,7 +38,7 @@ export class Http {
 
       return json;
     } catch (err) {
-      console.info('[FETCH-ERR] ', err);
+      console.info('[PUT-ERR] ', err);
       throw new Error();
     }
   };
@@ -53,7 +53,7 @@ export class Http {
 
       return json;
     } catch (err) {
-      console.info('[FETCH-ERR] ', err);
+      console.info('[DELETE-ERR] ', err);
       throw new Error();
     }
   };
