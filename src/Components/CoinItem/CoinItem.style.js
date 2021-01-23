@@ -9,7 +9,6 @@ export default StyleSheet.create({
     justifyContent: 'space-between',
     padding: 16,
     paddingLeft: Platform.OS ? 0 : 16,
-    marginLeft: Platform.OS ? 16 : 0,
   },
   imageIcon: {
     height: 22,
