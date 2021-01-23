@@ -1,4 +1,5 @@
 import {StyleSheet} from 'react-native';
+import Colors from '../../utils/colors';
 
 export default StyleSheet.create({
   btn: {
@@ -13,8 +14,7 @@ export default StyleSheet.create({
     textAlign: 'center',
   },
   container: {
-    alignItems: 'center',
-    backgroundColor: 'white',
+    backgroundColor: Colors.charade,
     flex: 1,
   },
   titleText: {
