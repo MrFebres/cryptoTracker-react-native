@@ -9,6 +9,7 @@ module.exports = {
       allowSeparatedGroups: false,
     },
   ],
+  omitLastInOneLineBlock: true,
   root: true,
   extends: '@react-native-community',
 };

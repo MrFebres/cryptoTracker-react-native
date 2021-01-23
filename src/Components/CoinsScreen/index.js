@@ -27,12 +27,15 @@ const CoinsScreen = ({navigation}) => {
   return (
     <View style={styles.container}>
       {loading ? (
-        <ActivityIndicator color="black" size="large" />
+        <ActivityIndicator color="white" size="large" />
       ) : (
         <FlatList
           data={coins}
-          renderItem={({item: {name, symbol}}) => (
-            <CoinsItem name={name} symbol={symbol} />
+          renderItem={({item}) => (
+            <CoinsItem
+              item={item}
+              onPress={() => navigation.navigate('CoinDetail', {item})}
+            />
           )}
         />
       )}
