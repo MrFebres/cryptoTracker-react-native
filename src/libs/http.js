@@ -8,7 +8,7 @@ export class Http {
 
       return json;
     } catch (err) {
-      console.info('[FETCH-ERR] ', err);
+      console.info('[GET-ERR] ', err);
       throw new Error();
     }
   };
@@ -23,7 +23,37 @@ export class Http {
 
       return json;
     } catch (err) {
-      console.info('[FETCH-ERR] ', err);
+      console.info('[POST-ERR] ', err);
+      throw new Error();
+    }
+  };
+
+  put = async (url, body) => {
+    try {
+      let req = await fetch(url, {
+        method: 'PUT',
+        body,
+      });
+      let json = await req.json();
+
+      return json;
+    } catch (err) {
+      console.info('[PUT-ERR] ', err);
+      throw new Error();
+    }
+  };
+
+  delete = async (url, body) => {
+    try {
+      let req = await fetch(url, {
+        method: 'DELETE',
+        body,
+      });
+      let json = await req.json();
+
+      return json;
+    } catch (err) {
+      console.info('[DELETE-ERR] ', err);
       throw new Error();
     }
   };
